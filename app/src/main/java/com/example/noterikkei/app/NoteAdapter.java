@@ -36,19 +36,20 @@ public class NoteAdapter extends ArrayAdapter<NoteModel> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         noteItem = new NoteModel();
-        LayoutInflater inflater = context.getLayoutInflater();
-        convertView = inflater.inflate(layoutId,parent);
+        View view =( (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(layoutId,null,false);
+        //LayoutInflater inflater = context.getLayoutInflater();
+        //convertView = inflater.inflate(layoutId,parent,false);
 
-        if (arrNote.size()>0 && position>=0) {
+        if (arrNote.size()>0) {
 
 
             Log.d("NoteAdataper","not nulll");
             NoteModel nodeItem = arrNote.get(position);
 
-            txtTitle = (TextView) convertView.findViewById(R.id.txtTitle);
-            txtContent = (TextView) convertView.findViewById(R.id.txtContent);
-            txtTimeSet = (TextView) convertView.findViewById(R.id.txtTimeSet);
-            imgAlarm = (ImageView) convertView.findViewById(R.id.imgAlarm);
+            txtTitle = (TextView) view.findViewById(R.id.txtTitle);
+            txtContent = (TextView) view.findViewById(R.id.txtContent);
+            txtTimeSet = (TextView) view.findViewById(R.id.txtTimeSet);
+            imgAlarm = (ImageView) view.findViewById(R.id.imgAlarm);
 
             txtTitle.setText(nodeItem.getStrTitle() + "");
             txtContent.setText(nodeItem.getStrContent() + "");
@@ -58,7 +59,7 @@ public class NoteAdapter extends ArrayAdapter<NoteModel> {
                 imgAlarm.setImageResource(R.drawable.ic_action_alarms);
             }
         }
-        return convertView;
+        return parent;
     }
 
 }
