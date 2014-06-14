@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:id="@+id/row1">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="nguyen duy hung"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imgAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_alarms"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row2">
+
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="15sp"
+                android:text="nguyen duy hung"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row3">
+
+            <TextView
+                android:id="@+id/txtTimeSet"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textStyle="italic"
+                android:layout_column="1"
+                android:textSize="15sp"
+                android:text="nguyen duy hung"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

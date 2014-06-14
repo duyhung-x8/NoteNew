@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.noterikkei.app.AddNoteActivity" >
+
+    <item
+        android:id="@+id/action_inSetImage"
+        android:title=""
+        android:icon="@drawable/ic_action_camera"
+        android:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_setBackground"
+        android:title=""
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_save"
+        android:title=""
+        android:icon="@drawable/ic_action_accept"
+        android:showAsAction="ifRoom"/>
+
+</menu>
